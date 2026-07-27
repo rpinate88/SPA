@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Profesional</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --accent: #38bdf8;
+      --text-muted: #94a3b8;
+    }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header {
+      padding: 3rem 0;
+      border-bottom: 1px solid #334155;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #fff; }
+    .subtitle { font-size: 1.25rem; color: var(--accent); }
+    section { margin: 3rem 0; }
+    h2 { font-size: 1.75rem; border-left: 4px solid var(--accent); padding-left: 0.75rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 1.5rem;
+      border: 1px solid #334155;
+    }
+    .card h3 { margin-top: 0; }
+    .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+    .tag {
+      background: #0284c7;
+      color: #fff;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .skills-list { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .skill-chip {
+      background: var(--card-bg);
+      border: 1px solid #334155;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border: 1px solid var(--accent);
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .cta-box p { font-size: 1.1rem; margin: 0; color: #e2e8f0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Portafolio Profesional</h1>
+      <p class="subtitle">Especialista en Desarrollo Web e Integraciones ERP (SAP MM / Spring Boot)</p>
+      <p style="color: var(--text-muted)">
+        Desarrollo soluciones backend y aplicaciones web modernas enfocadas en alto rendimiento, arquitectura limpia y optimización de procesos.
+      </p>
+    </header>
+
+    <section>
+      <h2>Proyectos Destacados</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Sistema de Gestión & Dashboard</h3>
+          <p>Aplicación web responsiva con trazabilidad en tiempo real, integración con bases de datos en la nube y persistencia de sesiones.</p>
+          <div class="tags">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Vercel</span>
+          </div>
+        </article>
+        
+        <article class="card">
+          <h3>Integración de Servicios / API OData</h3>
+          <p>Diseño y consumo de servicios web para conectar plataformas externas con sistemas backend empresariales de forma segura.</p>
+          <div class="tags">
+            <span class="tag">REST APIs</span>
+            <span class="tag">JSON</span>
+            <span class="tag">SAP ERP</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Habilidades & Tecnologías</h2>
+      <div class="skills-list">
+        <span class="skill-chip">Java / Spring Boot</span>
+        <span class="skill-chip">SAP MM & ERP Integration</span>
+        <span class="skill-chip">APIs RESTful / JSON</span>
+        <span class="skill-chip">Git / GitHub</span>
+        <span class="skill-chip">Vercel / Cloud Deployment</span>
+        <span class="skill-chip">HTML5 / CSS3 / JavaScript</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="cta-box">
+        <p><strong>¿Tienes un proyecto en mente?</strong></p>
+        <p style="margin-top: 0.5rem; color: var(--accent)">
+          Para contratar mis servicios o discutir requerimientos técnicos, escríbeme directamente a través del chat de <strong>Workana</strong>.
+        </p>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

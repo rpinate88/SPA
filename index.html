@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio Profesional</title>
+  <title>Rafael Piñate | SAP & Enterprise Solutions</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -11,6 +11,7 @@
       --text: #f8fafc;
       --accent: #38bdf8;
       --text-muted: #94a3b8;
+      --border: #334155;
     }
     body {
       font-family: system-ui, -apple-system, sans-serif;
@@ -21,46 +22,66 @@
       line-height: 1.6;
     }
     .container {
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 1.5rem;
     }
     header {
-      padding: 3rem 0;
-      border-bottom: 1px solid #334155;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
     }
-    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #fff; }
-    .subtitle { font-size: 1.25rem; color: var(--accent); }
+    h1 { font-size: 2.5rem; margin-bottom: 0.25rem; color: #fff; }
+    .role-title { font-size: 1.3rem; color: var(--accent); font-weight: 600; margin-bottom: 1rem; }
+    .summary { color: var(--text-muted); font-size: 1.05rem; max-width: 800px; }
+    
     section { margin: 3rem 0; }
-    h2 { font-size: 1.75rem; border-left: 4px solid var(--accent); padding-left: 0.75rem; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
+    h2 { font-size: 1.6rem; border-left: 4px solid var(--accent); padding-left: 0.75rem; margin-bottom: 1.5rem; }
+    
+    /* Grid y Tarjetas */
+    .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
     .card {
       background: var(--card-bg);
       border-radius: 8px;
       padding: 1.5rem;
-      border: 1px solid #334155;
+      border: 1px solid var(--border);
     }
-    .card h3 { margin-top: 0; }
-    .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+    .card h3 { margin-top: 0; font-size: 1.3rem; color: #fff; }
+    .card p { color: #cbd5e1; font-size: 0.98rem; margin-bottom: 1rem; }
+    
+    /* Tags / Chips */
+    .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .tag {
       background: #0284c7;
       color: #fff;
-      padding: 0.2rem 0.6rem;
+      padding: 0.25rem 0.7rem;
       border-radius: 4px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 500;
     }
-    .skills-list { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .skills-list { display: flex; gap: 0.6rem; flex-wrap: wrap; }
     .skill-chip {
       background: var(--card-bg);
-      border: 1px solid #334155;
-      padding: 0.5rem 1rem;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
       border-radius: 20px;
+      font-size: 0.9rem;
+      color: #e2e8f0;
     }
+    
+    /* Experiencia Timeline */
+    .exp-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .exp-header { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 0.5rem; }
+    .exp-title { font-weight: bold; color: var(--accent); font-size: 1.1rem; }
+    .exp-company { color: #fff; font-weight: 500; }
+    .exp-date { color: var(--text-muted); font-size: 0.88rem; }
+    
+    /* CTA Workana */
     .cta-box {
       background: linear-gradient(135deg, #1e293b, #0f172a);
       border: 1px solid var(--accent);
@@ -74,56 +95,118 @@
 <body>
   <div class="container">
 
+    <!-- ENCABEZADO (Sin palabras prohibidas ni datos de contacto) -->
     <header>
-      <h1>Portafolio Profesional</h1>
-      <p class="subtitle">Especialista en Desarrollo Web e Integraciones ERP (SAP MM / Spring Boot)</p>
-      <p style="color: var(--text-muted)">
-        Desarrollo soluciones backend y aplicaciones web modernas enfocadas en alto rendimiento, arquitectura limpia y optimización de procesos.
+      <h1>Rafael Piñate</h1>
+      <div class="role-title">SAP Functional Analyst & Enterprise Solutions Specialist</div>
+      <p class="summary">
+        Consultor y Analista Funcional con amplia trayectoria en soporte, configuración e implementación de módulos logísticos SAP (S/4HANA, MM, SD, SCM, WM). Especialista en optimización de procesos de negocio, integraciones de sistemas ERP/ORACLE, automatización de flujos y analítica de datos.
       </p>
     </header>
 
+    <!-- PROYECTOS CLAVE CLARIFICADOS -->
     <section>
-      <h2>Proyectos Destacados</h2>
+      <h2>Proyectos Clave & Implementaciones</h2>
       <div class="grid">
-        <article class="card">
-          <h3>Sistema de Gestión & Dashboard</h3>
-          <p>Aplicación web responsiva con trazabilidad en tiempo real, integración con bases de datos en la nube y persistencia de sesiones.</p>
-          <div class="tags">
-            <span class="tag">Spring Boot</span>
-            <span class="tag">Redis</span>
-            <span class="tag">Vercel</span>
-          </div>
-        </article>
         
         <article class="card">
-          <h3>Integración de Servicios / API OData</h3>
-          <p>Diseño y consumo de servicios web para conectar plataformas externas con sistemas backend empresariales de forma segura.</p>
+          <h3>Conversión de Sistema SAP ERP a SAP S/4HANA</h3>
+          <p>Análisis e implementación funcional en la migración a S/4HANA para los módulos logísticos (MM, SD, WM y LE-TRA). Responsable de la validación de requerimientos, configuración de funcionalidades, carga masiva de datos maestros, gestión del cambio y ejecución de pruebas integrales E2E.</p>
           <div class="tags">
-            <span class="tag">REST APIs</span>
-            <span class="tag">JSON</span>
-            <span class="tag">SAP ERP</span>
+            <span class="tag">Análisis Funcional</span>
+            <span class="tag">SAP S/4HANA</span>
+            <span class="tag">Migración Data</span>
+            <span class="tag">QA & Pruebas E2E</span>
+            <span class="tag">Gestión del Cambio</span>
           </div>
         </article>
+
+        <article class="card">
+          <h3>Integración de Sistema SAP SCM (F&R) a SAP S/4HANA</h3>
+          <p>Especialista funcional en el módulo Forecasting & Replenishment (F&R) para optimizar la cadena de suministro. Gestión de levantamiento de procesos, parametrización del sistema, capacitación a usuarios clave y pruebas de integración para el reabastecimiento automático.</p>
+          <div class="tags">
+            <span class="tag">SAP SCM (F&R)</span>
+            <span class="tag">Supply Chain</span>
+            <span class="tag">Análisis Funcional</span>
+            <span class="tag">Capacitación</span>
+            <span class="tag">QA</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Implementación de SAP ERP (ECC)</h3>
+          <p>Consultoría funcional en módulos logísticos MM y SD durante la fase de despliegue ERP. Configuración de procesos de compra e inventario, soporte a incidentes críticos, elaboración de documentación técnica/operativa y control estratégico de inventario.</p>
+          <div class="tags">
+            <span class="tag">SAP MM / SD</span>
+            <span class="tag">Análisis Funcional</span>
+            <span class="tag">Gestión de Inventario</span>
+            <span class="tag">Soporte L2/L3</span>
+            <span class="tag">Documentación Técnica</span>
+          </div>
+        </article>
+
       </div>
     </section>
 
+    <!-- TRAYECTORIA LABORAL -->
     <section>
-      <h2>Habilidades & Tecnologías</h2>
-      <div class="skills-list">
-        <span class="skill-chip">Java / Spring Boot</span>
-        <span class="skill-chip">SAP MM & ERP Integration</span>
-        <span class="skill-chip">APIs RESTful / JSON</span>
-        <span class="skill-chip">Git / GitHub</span>
-        <span class="skill-chip">Vercel / Cloud Deployment</span>
-        <span class="skill-chip">HTML5 / CSS3 / JavaScript</span>
+      <h2>Experiencia Destacada</h2>
+      
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Especialista SAP</span>
+          <span class="exp-company">Banesco S.A.</span>
+          <span class="exp-date">Dic 2022 – Jun 2024</span>
+        </div>
+        <p style="margin: 0; color: #cbd5e1; font-size: 0.95rem;">
+          Continuidad operativa y desarrollo funcional en módulos MM, SD, Marketing, Sales Cloud y Facturación Electrónica integrando SAP S/4HANA, CRM, C4C y Ariba.
+        </p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Analista SAP Logístico</span>
+          <span class="exp-company">Importadora Ricamar (Super 99)</span>
+          <span class="exp-date">Mar 2018 – Nov 2022</span>
+        </div>
+        <p style="margin: 0; color: #cbd5e1; font-size: 0.95rem;">
+          Soporte y configuración en S/4HANA, SCM (F&R), WM, LE-TRA y dashboards con SAP Analytics Cloud, UiPath y Automate Studio.
+        </p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Consultor ORACLE</span>
+          <span class="exp-company">Potsdam Business Inc.</span>
+          <span class="exp-date">Nov 2015 – Oct 2017</span>
+        </div>
+        <p style="margin: 0; color: #cbd5e1; font-size: 0.95rem;">
+          Desarrollo y despliegue de soluciones ERP Codisa NAF (HR/Payroll) mediante Oracle Forms, Reports y PL/SQL.
+        </p>
       </div>
     </section>
 
+    <!-- COMPETENCIAS Y CERTIFICACIONES -->
+    <section>
+      <h2>Especialidades & Herramientas</h2>
+      <div class="skills-list">
+        <span class="skill-chip">SAP S/4HANA (MM, SD, WM, LE-TRA)</span>
+        <span class="skill-chip">SAP SCM (F&R) & Ariba</span>
+        <span class="skill-chip">Scrum Master Certified</span>
+        <span class="skill-chip">SAP HANA Studio & SQLScript</span>
+        <span class="skill-chip">SAP Analytics Cloud</span>
+        <span class="skill-chip">APIs REST & Web Services</span>
+        <span class="skill-chip">RPA (UiPath / Automate)</span>
+        <span class="skill-chip">Oracle PL/SQL & ERP NAF</span>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION REGULARIZADO PARA WORKANA -->
     <section>
       <div class="cta-box">
-        <p><strong>¿Tienes un proyecto en mente?</strong></p>
+        <p><strong>¿Buscas soporte o consultoría funcional para tus sistemas?</strong></p>
         <p style="margin-top: 0.5rem; color: var(--accent)">
-          Para contratar mis servicios o discutir requerimientos técnicos, escríbeme directamente a través del chat de <strong>Workana</strong>.
+          Para coordinar requerimientos, discutir propuestas o contratar servicios, contáctame a través del chat de <strong>Workana</strong>.
         </p>
       </div>
     </section>
